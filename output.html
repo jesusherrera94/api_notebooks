@@ -1,0 +1,263 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Prompt Evaluation Report</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 20px;
+                color: #333;
+            }
+            .header {
+                background-color: #f0f0f0;
+                padding: 20px;
+                border-radius: 5px;
+                margin-bottom: 20px;
+            }
+            .summary-stats {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            .stat-box {
+                background-color: #fff;
+                border-radius: 5px;
+                padding: 15px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                flex-basis: 30%;
+                min-width: 200px;
+            }
+            .stat-value {
+                font-size: 24px;
+                font-weight: bold;
+                margin-top: 5px;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+            }
+            th {
+                background-color: #4a4a4a;
+                color: white;
+                text-align: left;
+                padding: 12px;
+            }
+            td {
+                padding: 10px;
+                border-bottom: 1px solid #ddd;
+                vertical-align: top;
+            }
+            tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+            .output-cell {
+                white-space: pre-wrap;
+            }
+            .score {
+                font-weight: bold;
+                padding: 5px 10px;
+                border-radius: 3px;
+                display: inline-block;
+            }
+            .score-high {
+                background-color: #c8e6c9;
+                color: #2e7d32;
+            }
+            .score-medium {
+                background-color: #fff9c4;
+                color: #f57f17;
+            }
+            .score-low {
+                background-color: #ffcdd2;
+                color: #c62828;
+            }
+            .output {
+                overflow: auto;
+                white-space: pre-wrap;
+            }
+
+            .output pre {
+                background-color: #f5f5f5;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                padding: 10px;
+                margin: 0;
+                font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+                font-size: 14px;
+                line-height: 1.4;
+                color: #333;
+                box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+                overflow-x: auto;
+                white-space: pre-wrap; 
+                word-wrap: break-word; 
+            }
+
+            td {
+                width: 20%;
+            }
+            .score-col {
+                width: 80px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Prompt Evaluation Report</h1>
+            <div class="summary-stats">
+                <div class="stat-box">
+                    <div>Total Test Cases</div>
+                    <div class="stat-value">3</div>
+                </div>
+                <div class="stat-box">
+                    <div>Average Score</div>
+                    <div class="stat-value">8.3 / 10</div>
+                </div>
+                <div class="stat-box">
+                    <div>Pass Rate (≥7)</div>
+                    <div class="stat-value">100.0%</div>
+                </div>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Scenario</th>
+                    <th>Prompt Inputs</th>
+                    <th>Solution Criteria</th>
+                    <th>Output</th>
+                    <th>Score</th>
+                    <th>Reasoning</th>
+                </tr>
+            </thead>
+            <tbody>
+    
+            <tr>
+                <td>Testing with a high-endurance athlete (marathon runner) requiring high carbohydrate intake and sustained energy throughout the day</td>
+                <td class="prompt-inputs"><strong>height:</strong> 180 cm<br><strong>weight:</strong> 72 kg<br><strong>goal:</strong> Marathon preparation with high carbohydrate intake for sustained endurance energy<br><strong>restrictions:</strong> None</td>
+                <td class="criteria">• Meal plan covers all three meals plus snacks for one full day<br>• Emphasizes carbohydrate-rich foods appropriate for marathon training<br>• Provides sustained energy distribution throughout the day<br>• Meal plan is concise and formatted for quick reference</td>
+                <td class="output"><pre># One-Day Marathon Preparation Meal Plan
+
+Here is a one-day meal plan for an athlete preparing for a marathon with optimized carbohydrate intake for sustained endurance energy:
+
+* **Calorie Target:** Approximately 3,200 calories
+* **Macronutrient Breakdown:** Protein (130g), Fat (80g), Carbs (480g)
+
+## Meal Plan:
+
+* **Breakfast (7:00 AM):** Oatmeal (100g dry weight) with banana (150g), honey (25g), and whole milk (240g). Side of whole wheat toast (60g) with almond butter (20g).
+  * Protein: 18g, Fat: 12g, Carbs: 110g
+
+* **Mid-Morning Snack (10:00 AM):** Energy bar (50g) and sports drink (500ml).
+  * Protein: 8g, Fat: 5g, Carbs: 70g
+
+* **Lunch (1:00 PM):** Lean ground turkey (140g) with brown rice (150g dry weight) and steamed sweet potato (200g). Mixed green salad (100g) with olive oil dressing (15ml).
+  * Protein: 42g, Fat: 18g, Carbs: 95g
+
+* **Pre-Workout Snack (3:30 PM):** White bread (80g) with jam (30g) and sports drink (400ml).
+  * Protein: 6g, Fat: 2g, Carbs: 95g
+
+* **Dinner (7:00 PM):** Grilled chicken breast (150g) with pasta (120g dry weight) in tomato-based sauce (150g), and steamed zucchini (150g). Whole grain roll (60g).
+  * Protein: 48g, Fat: 20g, Carbs: 85g
+
+* **Evening Snack (9:30 PM):** Low-fat yogurt (200g) with granola (40g) and blueberries (80g).
+  * Protein: 12g, Fat: 8g, Carbs: 50g
+
+* **Before Bed (Optional, 10:30 PM):** Banana (120g) with peanut butter (15g).
+  * Protein: 8g, Fat: 8g, Carbs: 25g
+
+This meal plan emphasizes complex carbohydrates and whole grains to fuel endurance training, while providing adequate protein for muscle recovery and repair. Timing of meals and snacks supports sustained energy throughout the day and training sessions.</pre></td>
+                <td class="score-col"><span class="score score-high">9</span></td>
+                <td class="reasoning">The solution comprehensively satisfies all mandatory requirements with clear daily totals, detailed macronutrient breakdown, and precisely specified meals with portions and timing. It successfully addresses the secondary criteria by emphasizing carbohydrate-rich foods (480g carbs), distributing energy across 7 eating occasions throughout the day, and maintaining a concise, well-formatted presentation suitable for quick reference. The macronutrient distribution (60% carbs, 16% protein, 24% fat) is appropriate for marathon training. Minor improvements could include explicit hydration guidance and clearer workout timing correlations, but these are not required by the stated criteria.</td>
+            </tr>
+        
+            <tr>
+                <td>Testing with a strength/power athlete (weightlifter) requiring high protein distribution and strategic caloric surplus for muscle building</td>
+                <td class="prompt-inputs"><strong>height:</strong> 180 cm<br><strong>weight:</strong> 85 kg<br><strong>goal:</strong> muscle building with caloric surplus for strength training<br><strong>restrictions:</strong> none</td>
+                <td class="criteria">• Meal plan contains exactly 4-5 meals distributed throughout the day<br>• Daily protein intake is at least 170g (2g per kg bodyweight) with balanced distribution across meals<br>• Total daily calories create a moderate surplus (approximately 2,800-3,100 kcal) appropriate for muscle building<br>• Meals are practical, compact, and quick to prepare for an athlete's schedule</td>
+                <td class="output"><pre># One-Day Muscle Building Meal Plan for Strength Training
+
+Here is a one-day meal plan for an athlete aiming to build muscle with a caloric surplus:
+
+*   **Calorie Target:** Approximately 3,200 calories
+*   **Macronutrient Breakdown:** Protein (180g), Fat (100g), Carbs (380g)
+
+**Meal Plan:**
+
+*   **Breakfast (7:00 AM):** Scrambled eggs (3 whole eggs, 150g) with whole wheat toast (80g) and avocado (50g). Orange juice (240ml).
+    *   Protein: 25g, Fat: 20g, Carbs: 45g
+
+*   **Mid-Morning Snack (10:00 AM):** Banana (150g) with peanut butter (30g) and whole milk (240ml).
+    *   Protein: 15g, Fat: 12g, Carbs: 50g
+
+*   **Lunch (1:00 PM):** Lean ground beef (150g) with brown rice (100g dry weight cooked), mixed vegetables (broccoli 100g, carrots 75g), and olive oil (15ml).
+    *   Protein: 45g, Fat: 18g, Carbs: 65g
+
+*   **Pre-Workout Snack (3:30 PM):** Oats (60g dry weight) with honey (25g) and whey protein powder (30g).
+    *   Protein: 32g, Fat: 3g, Carbs: 55g
+
+*   **Dinner (7:00 PM):** Grilled chicken breast (180g) with sweet potato (200g baked) and green beans (150g) with butter (10g).
+    *   Protein: 50g, Fat: 15g, Carbs: 85g
+
+*   **Evening Snack (9:00 PM):** Greek yogurt (200g, full-fat) with granola (40g) and berries (80g).
+    *   Protein: 18g, Fat: 12g, Carbs: 45g
+
+This meal plan emphasizes high-quality protein sources, complex carbohydrates for sustained energy, and healthy fats to support hormonal function and muscle growth. The caloric surplus combined with strength training will promote lean muscle development.</pre></td>
+                <td class="score-col"><span class="score score-medium">7</span></td>
+                <td class="reasoning">The solution successfully meets all three mandatory requirements with comprehensive detail. However, it violates one secondary criterion by providing 6 meals instead of 4-5, and slightly overshoots the caloric surplus recommendation. The meal plan is well-designed, nutritionally sound, and practical for an athlete. The violations are minor in nature—the extra meal and modest caloric overage don't fundamentally compromise the plan's effectiveness, but they do represent deviations from the specified criteria.</td>
+            </tr>
+        
+            <tr>
+                <td>Testing with an athlete with specific dietary restrictions (vegetarian/vegan endurance cyclist) requiring alternative protein sources and nutrient optimization within constraints</td>
+                <td class="prompt-inputs"><strong>height:</strong> 175 cm<br><strong>weight:</strong> 68 kg<br><strong>goal:</strong> 60 km endurance cycling training day with high energy expenditure<br><strong>restrictions:</strong> Vegan (no animal products); nut allergy; gluten-free</td>
+                <td class="criteria">• Meal plan covers all three meals with specific times/meals listed<br>• All foods comply with vegan, gluten-free, and nut-free restrictions<br>• Includes adequate plant-based protein sources for endurance athlete recovery<br>• Structured to provide sustained energy for long-distance cycling performance</td>
+                <td class="output"><pre># One-Day Meal Plan for Vegan Endurance Cyclist
+
+Here is a one-day meal plan for a 175 cm, 68 kg athlete completing a 60 km endurance cycling training day:
+
+* **Calorie Target:** Approximately 3,500 calories (high expenditure for 60 km cycling)
+* **Macronutrient Breakdown:** Protein (120g), Fat (105g), Carbs (525g)
+
+## Meal Plan:
+
+* **Breakfast (6:30 AM - Pre-ride fuel):** Gluten-free oatmeal (100g dry weight) with coconut milk (240ml), banana (150g), and sunflower seeds (25g). Rice cakes (2 cakes, 40g).
+    * Protein: 15g, Fat: 12g, Carbs: 110g
+
+* **Mid-Morning Snack (8:00 AM - During prep):** Dates (80g) with sunflower seed butter (30g) and gluten-free bread (50g).
+    * Protein: 8g, Fat: 12g, Carbs: 60g
+
+* **During Ride (Start of 60 km - 2-hour intervals):** Energy drink with maple syrup (500ml water, 60g maple syrup, pinch sea salt) consumed in 2 portions. Rice cakes (3 cakes, 60g).
+    * Protein: 2g, Fat: 0g, Carbs: 120g
+
+* **Lunch (1:00 PM - Post-ride recovery, within 30 mins of finishing):** Quinoa salad (cooked 75g dry weight) with roasted chickpeas (150g), cucumber (100g), cherry tomatoes (80g), olive oil (20ml), and lemon juice (15ml). Gluten-free bread (80g).
+    * Protein: 25g, Fat: 18g, Carbs: 95g
+
+* **Afternoon Snack (3:30 PM - Recovery):** Smoothie with coconut milk (250ml), frozen mango (100g), hemp seeds (20g), gluten-free oats (30g), and maple syrup (15g).
+    * Protein: 12g, Fat: 18g, Carbs: 75g
+
+* **Dinner (6:30 PM - Evening recovery meal):** Lentil and sweet potato curry (cooked lentils 150g, sweet potato 200g) with coconut milk (100ml), turmeric, ginger, and garlic. Brown rice (100g cooked). Side salad with mixed greens (100g) and olive oil dressing (15ml).
+    * Protein: 40g, Fat: 30g, Carbs: 140g
+
+* **Evening Snack (8:30 PM - Before bed):** Vegan protein shake with pea protein powder (25g), coconut milk (200ml), and pumpkin puree (100g).
+    * Protein: 18g, Fat: 15g, Carbs: 25g
+
+---
+
+**Nutritional Summary:**
+This meal plan prioritizes complex carbohydrates and sustained energy for endurance cycling, with strategic timing around the training event. The emphasis on legumes, seeds, and plant-based proteins ensures adequate amino acid intake while maintaining gluten-free and nut-free requirements. Electrolyte replacement during the ride supports hydration and performance.</pre></td>
+                <td class="score-col"><span class="score score-high">9</span></td>
+                <td class="reasoning">The solution comprehensively meets all three mandatory requirements: it provides a daily caloric total (3,500 calories stated), detailed macronutrient breakdown (120g protein, 105g fat, 525g carbs), and meals with exact foods, portions, and timing throughout the day. It successfully addresses all secondary criteria by covering all three meals plus snacks with specific times, strict adherence to dietary restrictions, appropriate plant-based protein sources for recovery, and excellent energy structuring for endurance cycling performance. The carbohydrate-heavy macronutrient profile is strategically appropriate for 60 km cycling. Minor weaknesses include a slight caloric discrepancy and marginal clarity issues, but these do not constitute failures of the core requirements.</td>
+            </tr>
+        
+            </tbody>
+        </table>
+    </body>
+    </html>
+    
